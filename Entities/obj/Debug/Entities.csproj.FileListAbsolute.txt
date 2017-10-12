@@ -1,0 +1,17 @@
+c:\users\estudiantes\documents\visual studio 2015\Projects\CarSharingProject\Entities\bin\Debug\Entities.dll
+c:\users\estudiantes\documents\visual studio 2015\Projects\CarSharingProject\Entities\bin\Debug\Entities.pdb
+c:\users\estudiantes\documents\visual studio 2015\Projects\CarSharingProject\Entities\obj\Debug\Entities.csprojResolveAssemblyReference.cache
+c:\users\estudiantes\documents\visual studio 2015\Projects\CarSharingProject\Entities\obj\Debug\Entities.dll
+c:\users\estudiantes\documents\visual studio 2015\Projects\CarSharingProject\Entities\obj\Debug\Entities.pdb
+C:\Users\ESTUDIANTES\Desktop\CarSharing\Entities\obj\Debug\Entities.csprojResolveAssemblyReference.cache
+C:\Users\ESTUDIANTES\Desktop\CarSharing\Entities\obj\Debug\Entities.dll
+C:\Users\ESTUDIANTES\Desktop\CarSharing\Entities\obj\Debug\Entities.pdb
+C:\Users\ESTUDIANTES\Desktop\CarSharing\Entities\bin\Debug\Entities.dll
+C:\Users\ESTUDIANTES\Desktop\CarSharing\Entities\bin\Debug\Entities.pdb
+C:\Users\Developer AZ\Desktop\CarSharing-master\Entities\bin\Debug\Entities.dll
+C:\Users\Developer AZ\Desktop\CarSharing-master\Entities\bin\Debug\Entities.pdb
+C:\Users\Developer AZ\Desktop\CarSharing-master\Entities\obj\Debug\Entities.csprojResolveAssemblyReference.cache
+C:\Users\Developer AZ\Desktop\CarSharing-master\Entities\obj\Debug\Entities.dll
+C:\Users\Developer AZ\Desktop\CarSharing-master\Entities\obj\Debug\Entities.pdb
+C:\Users\Developer AZ\Desktop\CarSharing-master\Entities\bin\Debug\BusinessObjects.dll
+C:\Users\Developer AZ\Desktop\CarSharing-master\Entities\bin\Debug\BusinessObjects.pdb
