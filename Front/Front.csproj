@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -232,9 +233,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
-      <Project>{704d96f0-b672-4929-b890-9aebf491f890}</Project>
-      <Name>DataAccess</Name>
+    <ProjectReference Include="..\BusinessObjects\BusinessObjects.csproj">
+      <Project>{688CB691-1FE6-4D4C-92D8-EE7B3195274C}</Project>
+      <Name>BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BussinessLogic\BussinessLogic.csproj">
+      <Project>{02e9ccf4-6dfd-4308-9a05-e691c30a0dfd}</Project>
+      <Name>BussinessLogic</Name>
     </ProjectReference>
     <ProjectReference Include="..\Entities\Entities.csproj">
       <Project>{558c4006-f6a5-43a9-a0b5-805f35396165}</Project>

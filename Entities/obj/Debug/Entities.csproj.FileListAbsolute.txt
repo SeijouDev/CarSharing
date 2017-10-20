@@ -15,3 +15,11 @@ C:\Users\Developer AZ\Desktop\CarSharing-master\Entities\obj\Debug\Entities.dll
 C:\Users\Developer AZ\Desktop\CarSharing-master\Entities\obj\Debug\Entities.pdb
 C:\Users\Developer AZ\Desktop\CarSharing-master\Entities\bin\Debug\BusinessObjects.dll
 C:\Users\Developer AZ\Desktop\CarSharing-master\Entities\bin\Debug\BusinessObjects.pdb
+C:\Users\ASUS\Desktop\CarSharing\Entities\bin\Debug\Entities.dll
+C:\Users\ASUS\Desktop\CarSharing\Entities\bin\Debug\Entities.pdb
+C:\Users\ASUS\Desktop\CarSharing\Entities\bin\Debug\BusinessObjects.dll
+C:\Users\ASUS\Desktop\CarSharing\Entities\bin\Debug\BusinessObjects.pdb
+C:\Users\ASUS\Desktop\CarSharing\Entities\obj\Debug\Entities.csprojResolveAssemblyReference.cache
+C:\Users\ASUS\Desktop\CarSharing\Entities\obj\Debug\Entities.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\CarSharing\Entities\obj\Debug\Entities.dll
+C:\Users\ASUS\Desktop\CarSharing\Entities\obj\Debug\Entities.pdb

@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "targets": {
     ".NETStandard,Version=v1.1": {
       "Microsoft.NETCore.Platforms/1.1.0": {
@@ -2476,19 +2476,31 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Developer AZ\\.nuget\\packages\\": {}
+    "C:\\Users\\ASUS\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Developer AZ\\Desktop\\CarSharing-master\\BusinessObjects\\BusinessObjects.csproj",
+      "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\CarSharing\\BusinessObjects\\BusinessObjects.csproj",
       "projectName": "BusinessObjects",
-      "projectPath": "C:\\Users\\Developer AZ\\Desktop\\CarSharing-master\\BusinessObjects\\BusinessObjects.csproj",
-      "outputPath": "C:\\Users\\Developer AZ\\Desktop\\CarSharing-master\\BusinessObjects\\obj\\",
+      "projectPath": "C:\\Users\\ASUS\\Desktop\\CarSharing\\BusinessObjects\\BusinessObjects.csproj",
+      "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ASUS\\Desktop\\CarSharing\\BusinessObjects\\obj\\",
       "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
       "originalTargetFrameworks": [
         "netstandard1.1"
       ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
       "frameworks": {
         "netstandard1.1": {
           "projectReferences": {}

@@ -64,6 +64,39 @@ namespace DataAccess
             return lista;
         }
 
+        public Prestador ConsultarPorUsuario(string usuario, string clave)
+        {
+
+            Prestador result = null;
+
+            var con = new Conexion();
+            con.Conectar();
+
+            var query = $"SELECT nombre,apellido,cedula,correo,ciudad_residencia, fecha_nacimiento, telefono, usuario, clave FROM prestador WHERE eliminado = 0 AND usuario = '{usuario}' AND clave = '{clave}'";
+
+            var dataTable = con.Consultar(query);
+
+            if (dataTable != null && dataTable.Rows.Count > 0)
+            {
+                result = new Prestador
+                (
+                    dataTable.Rows[0]["nombre"].ToString(),
+                    dataTable.Rows[0]["apellido"].ToString(),
+                    dataTable.Rows[0]["cedula"].ToString(),
+                    dataTable.Rows[0]["correo"].ToString(),
+                    dataTable.Rows[0]["ciudad_residencia"].ToString(),
+                    dataTable.Rows[0]["fecha_nacimiento"].ToString(),
+                    dataTable.Rows[0]["telefono"].ToString(),
+                    usuario, clave
+                );
+
+            }
+
+            con.Desconectar();
+
+            return result;
+        }
+
         public string Actualizar(Prestador p)
         {
             var con = new Conexion();

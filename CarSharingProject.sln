@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.7
+VisualStudioVersion = 15.0.26730.8
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{558C4006-F6A5-43A9-A0B5-805F35396165}"
 EndProject
@@ -11,7 +11,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Front", "Front\Front.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "Testing\Testing.csproj", "{D4C463DB-05A7-4A9C-9195-788B63F0D265}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessObjects", "BusinessObjects\BusinessObjects.csproj", "{688CB691-1FE6-4D4C-92D8-EE7B3195274C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessObjects", "BusinessObjects\BusinessObjects.csproj", "{688CB691-1FE6-4D4C-92D8-EE7B3195274C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BussinessLogic", "BussinessLogic\BussinessLogic.csproj", "{02E9CCF4-6DFD-4308-9A05-E691C30A0DFD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,8 +41,15 @@ Global
 		{688CB691-1FE6-4D4C-92D8-EE7B3195274C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{688CB691-1FE6-4D4C-92D8-EE7B3195274C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{688CB691-1FE6-4D4C-92D8-EE7B3195274C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02E9CCF4-6DFD-4308-9A05-E691C30A0DFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02E9CCF4-6DFD-4308-9A05-E691C30A0DFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02E9CCF4-6DFD-4308-9A05-E691C30A0DFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02E9CCF4-6DFD-4308-9A05-E691C30A0DFD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BEE56144-290D-4F14-93EA-75EA862CC5E4}
 	EndGlobalSection
 EndGlobal

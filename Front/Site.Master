@@ -52,20 +52,17 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/Prestadores">Prestadores</a></li>
+                      <!--  <li><a runat="server" href="~/Prestadores">Prestadores</a></li>
                         <li><a runat="server" href="~/About">Pasajeros</a></li>
-                        <li><a runat="server" href="~/Contact">Rutas</a></li>
+                        <li><a runat="server" href="~/Contact">Rutas</a></li> -->
                     </ul>
                 </div>
             </div>
-        </div>
+         </div>
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-            <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Mi aplicación ASP.NET</p>
-            </footer>
+
         </div>
 
     </form>
