@@ -25,16 +25,21 @@
     <section class="hero is-dark is-large">
   <div class="hero-body">
     <div class="container">
-    <a style="text-decoration: underline; padding: 5%;" href="Ruta.aspx">
-      <h2 class="title">
-         Mis Rutas
+    
+      <h2 class="title" style="padding: 10px; margin: 5px auto">
+          <a style="text-decoration: underline; padding: 5%;" href="Ruta.aspx">
+              Mis Rutas
+          </a>
       </h2>
-     </a>
-        <% if( Convert.ToInt32(Session["rol"]) == 0) { %>       
-        <a style="text-decoration: underline; padding: 5%;" href="ListaVehiculo.aspx">
-            <h2 class="title">Mis Vehículos</h2>
-        </a>
-        <% } %>
+        
+     <% if( Convert.ToInt32(Session["rol"]) == 0) { %>       
+        
+            <h2 class="title" style="padding: 10px; margin: 5px auto">
+                <a style="text-decoration: underline;" href="ListaVehiculo.aspx">
+                    Mis Vehículos
+                </a>
+            </h2>
+     <% } %>
 
     </div>
   </div>
