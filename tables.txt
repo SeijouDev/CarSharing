@@ -2,6 +2,7 @@ USE car_sharing_db;
 
 CREATE TABLE `vehiculo` (
 `vehiculo_id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+`fk_prestador` INT NOT NULL REFERENCES `prestador`(`prestador_id`),
 `marca` VARCHAR(20) NOT NULL,
 `linea` VARCHAR(20) NOT NULL,
 `placa` VARCHAR(10) NOT NULL,
@@ -11,7 +12,8 @@ CREATE TABLE `vehiculo` (
 `tipo_combustible` VARCHAR(10),
 `clase_vehiculo` VARCHAR(20) NOT NULL,
 `vacantes` INT NOT NULL,
-`foto` VARCHAR(21000)
+`foto` VARCHAR(21000),
+`eliminado` INT NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
@@ -19,7 +21,7 @@ CREATE TABLE `prestador` (
 `prestador_id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 `nombre` VARCHAR(20) NOT NULL,
 `apellido` VARCHAR(20) NOT NULL,
-`cedula` VARCHAR(20) NOT NULL,
+`cedula` VARCHAR(20) NOT NULL UNIQUE,
 `correo` VARCHAR(50) NOT NULL,
 `ciudad_residencia` VARCHAR(20) NOT NULL,
 `fecha_nacimiento` DATETIME NOT NULL,
@@ -30,15 +32,27 @@ CREATE TABLE `prestador` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE `pasajero` (
-`prestador_id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+`pasajero_id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 `nombre` VARCHAR(20) NOT NULL,
 `apellido` VARCHAR(20) NOT NULL,
-`cedula` VARCHAR(20) NOT NULL,
+`cedula` VARCHAR(20) NOT NULL UNIQUE,
 `correo` VARCHAR(50) NOT NULL,
 `ciudad_residencia` VARCHAR(20) NOT NULL,
 `fecha_nacimiento` DATETIME NOT NULL,
 `telefono` VARCHAR(15),
 `usuario` VARCHAR(10) NOT NULL,
 `clave` VARCHAR(20) NOT NULL,
+`eliminado` INT NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `ruta` (
+`ruta_id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+`nombre` VARCHAR(20) NOT NULL,
+`direccion_inicio` VARCHAR(50) NOT NULL,
+`coordenadas_inicio` VARCHAR(50) NOT NULL,
+`direccion_destino` VARCHAR(50) NOT NULL,
+`coordenadas_destino` VARCHAR(50) NOT NULL,
+`trayecto` VARCHAR(21000),
+`fk_prestador` INT NOT NULL REFERENCES `prestador`(`prestador_id`),
 `eliminado` INT NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
