@@ -1,5 +1,5 @@
 ﻿
-<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Front._Default" %>
+<%@ Page Title="CarSharing - Login" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Front._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
   <section class="hero is-success is-fullheight">
@@ -33,7 +33,7 @@
                   </div>
               </div>
             
-              <asp:Label Visible="false" ID="login_result" runat="server"></asp:Label>
+              <asp:Label Visible="false" ID="login_result" runat="server" CssClass="alert_msg"></asp:Label>
           </div>
         </div>
       </div>

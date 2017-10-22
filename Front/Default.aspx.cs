@@ -31,25 +31,43 @@ namespace Front
 
                 if (pasajero != null)
                 {
+                    Session["Usuario"] = pasajero.Usuario;
+                    Session["Nombre"] = pasajero.Nombre;
+                    Session["Apellido"] = pasajero.Apellido;
+                    Session["Cedula"] = pasajero.Cedula;
+                    Session["Correo"] = pasajero.Correo;
+                    Session["FechaNacimiento"] = pasajero.FechaNacimiento;
+                    Session["CiudadRes"] = pasajero.CiudadResidencia;
+                    Session["Telefono"] = pasajero.Telefono;
+                    Session["CiudadRes"] = pasajero.CiudadResidencia;
+
                     result = !result;
-                }
+                }                
+                    
                 else
                 {
                     var prestador = Controlador.LoginPrestador(Username.Text, Pass.Text);
 
                     if (prestador != null)
-                        result = !result;
+                    {
+                        Session["Usuario"] = prestador.Usuario;
+                        Session["Nombre"] = prestador.Nombre;
+                        Session["Apellido"] = prestador.Apellido;
+                        Session["Cedula"] = prestador.Cedula;
+                        Session["Correo"] = prestador.Correo;
+                        Session["FechaNacimiento"] = prestador.FechaNacimiento;
+                        Session["CiudadRes"] = prestador.CiudadResidencia;
+                        Session["Telefono"] = prestador.Telefono;
+                        Session["CiudadRes"] = prestador.CiudadResidencia;
 
+                        result = !result;
+                    }
                 }
 
                 if (result)
-                {
-                    login_result.Text = "Buena rata!";
-                    login_result.Visible = true;
-                }
+                    Response.Redirect("LobbyPrincipal.aspx");                
                 else
                 {
-
                     login_result.Text = "Usuario o contraseña incorrectos!";
                     login_result.Visible = true;
                 }
