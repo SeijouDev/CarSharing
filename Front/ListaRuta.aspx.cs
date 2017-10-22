@@ -12,6 +12,10 @@ namespace Front
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["Usuario"] == null)
+                Response.Redirect("Default.aspx");
+
+
             var rutas = Controlador.ObtenerRutasPorUsuario(Convert.ToInt32(Session["pk"]) , Convert.ToInt32(Session["rol"]));
 
             ListaRutasGv.DataSource = rutas;

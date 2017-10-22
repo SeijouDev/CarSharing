@@ -13,7 +13,35 @@
     
     <asp:gridview id="ListaRutasGv" autogeneratecolumns="false"  runat="server">
         <Columns>
-            <asp:BoundField HeaderText="Nombre" DataField="Nombre" />
+             <asp:TemplateField HeaderText = "Nombre">
+                <ItemTemplate>                       
+                    <asp:Label ID="NombreRuta" runat="server"  Text='<%# Eval("Nombre")%>'></asp:Label>           
+                </ItemTemplate>
+            </asp:TemplateField>
+
+            <asp:TemplateField HeaderText = "Dirección de inicio">
+                <ItemTemplate>                       
+                    <asp:Label ID="NombreRuta" runat="server"  Text='<%# Eval("DireccionPuntoInicio")%>'></asp:Label>           
+                </ItemTemplate>
+            </asp:TemplateField>
+
+            <asp:TemplateField HeaderText = "Dirección de destino">
+                <ItemTemplate>                       
+                    <asp:Label ID="NombreRuta" runat="server"  Text='<%# Eval("DireccionPuntoFinal")%>'></asp:Label>           
+                </ItemTemplate>
+            </asp:TemplateField>
+
+             <asp:TemplateField HeaderText="Editar">
+                <ItemTemplate>
+                    <asp:LinkButton ID="lnkRemove" runat="server"  CommandArgument = '<%# Eval("Nombre")%>' Text = "Editar"></asp:LinkButton>
+                </ItemTemplate>                
+            </asp:TemplateField>
+
+            <asp:TemplateField HeaderText="Eliminar">
+                <ItemTemplate>
+                    <asp:LinkButton ID="lnkRemove" runat="server"  CommandArgument = '<%# Eval("Nombre")%>' OnClientClick = "return confirm('¿ Realmente desea eliminar esta ruta ?')" Text = "Eliminar"></asp:LinkButton>
+                </ItemTemplate>                
+            </asp:TemplateField>
         </Columns>
     </asp:gridview>
 

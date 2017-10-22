@@ -12,6 +12,9 @@ namespace Front
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["Usuario"] == null)
+                Response.Redirect("Default.aspx");
+
             var vehiculos = Controlador.ObtenerVehiculosPorPrestador(Convert.ToInt32(Session["pk"]));
 
             ListaVehiculosGv.DataSource = vehiculos;

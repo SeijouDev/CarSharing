@@ -13,6 +13,13 @@ namespace Front
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            if (Session["Usuario"] == null)
+                Response.Redirect("Default.aspx");
+
+            VehiculoDropdown.DataSource = Controlador.ObtenerVehiculosPorPrestador(Convert.ToInt32(Session["pk"]));
+            VehiculoDropdown.DataTextField = "Placa";
+            VehiculoDropdown.DataValueField = "Placa";
+            VehiculoDropdown.DataBind();
         }
 
         protected void submit_form_Click(object sender, EventArgs e)

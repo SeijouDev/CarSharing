@@ -23,6 +23,17 @@
             <asp:BoundField HeaderText="Combustible" DataField="TipoCombustible" />
             <asp:BoundField HeaderText="Tipo" DataField="ClaseVehiculo" />
             <asp:BoundField HeaderText="Vacantes" DataField="Vacantes" />
+            <asp:TemplateField HeaderText="Editar">
+                <ItemTemplate>
+                    <asp:LinkButton ID="lnkRemove" runat="server"  CommandArgument = '<%# Eval("Placa")%>' Text = "Editar"></asp:LinkButton>
+                </ItemTemplate>                
+            </asp:TemplateField>
+
+            <asp:TemplateField HeaderText="Eliminar">
+                <ItemTemplate>
+                    <asp:LinkButton ID="lnkRemove" runat="server"  CommandArgument = '<%# Eval("Placa")%>' OnClientClick = "return confirm('¿ Realmente desea eliminar esta ruta ?')" Text = "Eliminar"></asp:LinkButton>
+                </ItemTemplate>                
+            </asp:TemplateField>
         </Columns>
     </asp:gridview>
     

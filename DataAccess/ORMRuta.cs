@@ -14,12 +14,10 @@ namespace DataAccess
         {
             var con = new Conexion();
             con.Conectar();
-
-            var coor_inicio  = $"{r.PuntoInicio.Latitud}:{r.PuntoInicio.Longitud}";
-            var coor_destino = $"{r.PuntoFinal.Latitud}:{r.PuntoFinal.Longitud}";
+            
 
             var query = $"INSERT INTO ruta (fk_prestador,nombre, direccion_inicio, coordenadas_inicio, direccion_destino, coordenadas_destino ,eliminado) " +
-                $"VALUES ({r.FkPrestador} ,'{r.Nombre}', '{r.PuntoInicio.Direccion}', '{coor_inicio}', '{r.PuntoFinal.Direccion}', '{coor_destino}' ,0)";
+                $"VALUES ({r.FkPrestador} ,'{r.Nombre}', '{r.DireccionPuntoInicio}', '{r.PuntoInicio}', '{r.DireccionPuntoFinal}', '{r.PuntoFinal}' ,0)";
 
             string res = con.EjecutarQuery(query);
 
@@ -72,11 +70,8 @@ namespace DataAccess
             var con = new Conexion();
             con.Conectar();
 
-            var coor_inicio = $"{r.PuntoInicio.Latitud}:{r.PuntoInicio.Longitud}";
-            var coor_destino = $"{r.PuntoFinal.Latitud}:{r.PuntoFinal.Longitud}";
-
-            var query = $"UPDATE ruta SET direccion_inicio = '{r.PuntoInicio.Direccion}', coordenadas_inicio = '{coor_inicio}' , " +
-                 $"direccion_destino = '{r.PuntoFinal.Direccion}', coordenadas_destino = '{coor_destino}' " +
+            var query = $"UPDATE ruta SET direccion_inicio = '{r.DireccionPuntoInicio}', coordenadas_inicio = '{r.PuntoInicio}' , " +
+                 $"direccion_destino = '{r.DireccionPuntoFinal}', coordenadas_destino = '{r.PuntoFinal}' " +
                 $" WHERE fk_prestador = '{r.FkPrestador}' AND nombre = '{r.Nombre}' AND eliminado = 0";
 
             string res = con.EjecutarQuery(query);
