@@ -40,6 +40,8 @@ namespace Front
                     Session["CiudadRes"] = pasajero.CiudadResidencia;
                     Session["Telefono"] = pasajero.Telefono;
                     Session["CiudadRes"] = pasajero.CiudadResidencia;
+                    Session["rol"] = 1;
+                    Session["pk"] = Controlador.ObtenerPkUsuario(pasajero.Cedula, 1);
 
                     result = !result;
                 }                
@@ -59,6 +61,10 @@ namespace Front
                         Session["CiudadRes"] = prestador.CiudadResidencia;
                         Session["Telefono"] = prestador.Telefono;
                         Session["CiudadRes"] = prestador.CiudadResidencia;
+                        Session["rol"] = 0;
+                        Session["pk"] = Controlador.ObtenerPkUsuario(prestador.Cedula, 0);
+
+                        var b = Session["pk"];
 
                         result = !result;
                     }

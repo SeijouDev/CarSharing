@@ -140,6 +140,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="ListaVehiculo.aspx" />
     <Content Include="LobbyPrincipal.aspx" />
     <Content Include="Prestadores.aspx" />
     <Content Include="Ruta.aspx" />
@@ -190,6 +191,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ListaVehiculo.aspx.cs">
+      <DependentUpon>ListaVehiculo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListaVehiculo.aspx.designer.cs">
+      <DependentUpon>ListaVehiculo.aspx</DependentUpon>
     </Compile>
     <Compile Include="LobbyPrincipal.aspx.cs">
       <DependentUpon>LobbyPrincipal.aspx</DependentUpon>

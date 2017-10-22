@@ -13,8 +13,8 @@ namespace DataAccess
             var con = new Conexion();
             con.Conectar();
 
-            var query = $"INSERT INTO vehiculo (marca,linea,placa,color,ciudad_placa,modelo,tipo_combustible,clase_vehiculo,vacantes,foto,eliminado) " +
-                $"VALUES ('{v.Marca}','{v.Linea}','{v.Placa}','{v.Color}','{v.CiudadPlaca}',{v.Modelo},'{v.TipoCombustible}','{v.ClaseVehiculo}',{v.Vacantes},'{v.Foto}'0)";
+            var query = $"INSERT INTO vehiculo (fk_prestador, marca,linea,placa,color,ciudad_placa,modelo,tipo_combustible,clase_vehiculo,vacantes,foto,eliminado) " +
+                $"VALUES ({v.fkPrestador} ,'{v.Marca}','{v.Linea}','{v.Placa}','{v.Color}','{v.CiudadPlaca}',{v.Modelo},'{v.TipoCombustible}','{v.ClaseVehiculo}',{v.Vacantes},'{v.Foto}', 0)";
 
             string res = con.EjecutarQuery(query);
 

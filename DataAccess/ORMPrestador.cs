@@ -25,6 +25,26 @@ namespace DataAccess
 
         }
 
+        public int ObtenerPk(string cedula)
+        {
+
+            int result = 0;
+
+            var con = new Conexion();
+            con.Conectar();
+
+            var query = $"SELECT prestador_id FROM prestador WHERE eliminado = 0 AND cedula = '{cedula}'";
+
+            var dataTable = con.Consultar(query);
+
+            if (dataTable != null && dataTable.Rows.Count > 0)
+                result = Convert.ToInt32(dataTable.Rows[0]["prestador_id"].ToString());
+            
+            con.Desconectar();
+
+            return result;
+        }
+
         public List<Prestador> Consultar(string cedula = "")
         {
             var con = new Conexion();

@@ -71,7 +71,6 @@
     <asp:Button runat="server" ID="submit_form" Text="Guardar" CssClass="btn btn-success" OnClick="submit_form_Click"/>
     <br />
 
-
 </asp:Content>
 
 

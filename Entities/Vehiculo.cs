@@ -18,11 +18,12 @@ namespace Entities
         public string ClaseVehiculo { get; set; }
         public int Vacantes { get; set; }
         public string Foto { get; set; }
+        public int fkPrestador { get; set; }
 
         public Vehiculo() { }
 
         public Vehiculo(string marca, string linea, string placa, string color, string ciudadPlaca, int modelo,
-            string tipoCombustible, string claseVehiculo, int vacantes, string foto)
+            string tipoCombustible, string claseVehiculo, int vacantes, string foto, int fkPrestador)
         {
             this.Marca = marca;
             this.Linea = linea;
@@ -34,6 +35,7 @@ namespace Entities
             this.ClaseVehiculo = claseVehiculo;
             this.Vacantes = vacantes;
             this.Foto = foto;
+            this.fkPrestador = fkPrestador;
         }
 
     }

@@ -26,6 +26,11 @@ namespace BussinessLogic
             return result; 
         }
 
+        public static int ObtenerPkUsuario(string cedula, int rol)
+        {
+            return (rol == 0) ? new ORMPrestador().ObtenerPk(cedula) : -1; 
+        }
+
         public static string CrearPasajero(Pasajero p)
         {
             var db = new ORMPasajero();
@@ -54,6 +59,15 @@ namespace BussinessLogic
         public static Prestador LoginPrestador(string usuario, string clave)
         {
             return Validacion.LoginPrestador(usuario, clave);
+        }
+
+        public static string CrearVehiculo(Vehiculo v)
+        {
+            if (v.ClaseVehiculo == "Moto" && v.Vacantes != 1)
+                v.Vacantes = 1;
+
+            var db = new ORMVehiculo();
+            return db.Insertar(v);
         }
     }
 }

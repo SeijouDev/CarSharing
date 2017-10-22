@@ -4,16 +4,20 @@
 
     <asp:Label runat="server" ID="labelSaludo">Bienvenido, </asp:Label>
 
-     <div class="field">
-        <div class="control" style="text-align: center; margin-top: 1rem">
-            <a style="text-decoration: underline; color: #1496ed" href="Ruta.aspx">Crear ruta</a>
-        </div>
-    </div>
     <div class="field">
         <div class="control" style="text-align: center; margin-top: 1rem">
-            <a style="text-decoration: underline; color: #1496ed" href="Vehiculo.aspx">Crear vehículo</a>
+            <a style="text-decoration: underline; color: #1496ed" href="Ruta.aspx">Mis rutas</a>
         </div>
     </div>
+
+    <% if( Convert.ToInt32(Session["rol"]) == 0) { %>       
+        <div class="field">
+            <div class="control" style="text-align: center; margin-top: 1rem">
+                <a style="text-decoration: underline; color: #1496ed" href="ListaVehiculo.aspx">Mis vehículos</a>
+            </div>
+        </div>    
+    <% } %>
+     
 
      <div class="field">
         <div class="control" style="text-align: center; margin-top: 1rem">
