@@ -20,20 +20,24 @@
           </div>
         </div>
       </div>
-    </nav> 
-    
-    <div class="field">
-        <div class="control" style="text-align: center; margin-top: 1rem">
-            <a style="text-decoration: underline; color: #1496ed" href="Ruta.aspx">Mis rutas</a>
-        </div>
-    </div>
+    </nav>
 
-    <% if( Convert.ToInt32(Session["rol"]) == 0) { %>       
-        <div class="field">
-            <div class="control" style="text-align: center; margin-top: 1rem">
-                <a style="text-decoration: underline; color: #1496ed" href="ListaVehiculo.aspx">Mis vehículos</a>
-            </div>
-        </div>    
-    <% } %>
+    <section class="hero is-dark is-large">
+  <div class="hero-body">
+    <div class="container">
+    <a style="text-decoration: underline; padding: 5%;" href="Ruta.aspx">
+      <h2 class="title">
+         Mis Rutas
+      </h2>
+     </a>
+        <% if( Convert.ToInt32(Session["rol"]) == 0) { %>       
+        <a style="text-decoration: underline; padding: 5%;" href="ListaVehiculo.aspx">
+            <h2 class="title">Mis Vehículos</h2>
+        </a>
+        <% } %>
+
+    </div>
+  </div>
+</section>
 
 </asp:Content>
