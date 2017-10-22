@@ -12,6 +12,9 @@
     </div>
 
 
+<%--    <asp:gridview id="ListaVehiculos" autogeneratecolumns="true"  runat="server">
+    </asp:gridview>--%>
+
    
 
 </asp:Content>
