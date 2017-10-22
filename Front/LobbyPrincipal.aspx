@@ -2,7 +2,7 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <nav class="navbar" role="navigation" aria-label="dropdown navigation">
+    <nav class="navbar is-black" role="navigation" aria-label="dropdown navigation">
       <div class="navbar-menu">
         <div class="navbar-start">
           <div class="navbar-item">CarSharing</div>
