@@ -65,6 +65,44 @@ namespace DataAccess
             return lista;
         }
 
+        public List<Vehiculo> ConsultarPorPrestador(int fkPrestador)
+        {
+            var con = new Conexion();
+            con.Conectar();
+
+            var query = $"SELECT marca,linea,placa,color,ciudad_placa, modelo, tipo_combustible, clase_vehiculo, vacantes, foto FROM vehiculo WHERE eliminado = 0 AND fk_prestador = {fkPrestador}";
+
+            var dataTable = con.Consultar(query);
+            var lista = new List<Vehiculo>();
+
+            if (dataTable != null)
+            {
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    lista.Add(
+                        new Vehiculo
+                        {
+                            Marca = row["marca"].ToString(),
+                            Linea = row["linea"].ToString(),
+                            Placa = row["placa"].ToString(),
+                            Color = row["color"].ToString(),
+                            CiudadPlaca = row["ciudad_placa"].ToString(),
+                            Modelo = Convert.ToInt32(row["modelo"].ToString()),
+                            TipoCombustible = row["tipo_combustible"].ToString(),
+                            ClaseVehiculo = row["clase_vehiculo"].ToString(),
+                            Vacantes = Convert.ToInt32(row["vacantes"].ToString()),
+                            Foto = row["foto"].ToString(),
+                            fkPrestador = fkPrestador
+                        }
+                    );
+                }
+            }
+
+            con.Desconectar();
+
+            return lista;
+        }
+
         public string Actualizar(Vehiculo v)
         {
             var con = new Conexion();

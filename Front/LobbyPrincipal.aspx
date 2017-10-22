@@ -23,21 +23,19 @@
     </nav>
 
     <section class="hero is-dark is-large">
-  <div class="hero-body">
-    <div class="container">
-    <a style="text-decoration: underline; padding: 5%;" href="Ruta.aspx">
-      <h2 class="title">
-         Mis Rutas
-      </h2>
-     </a>
-        <% if( Convert.ToInt32(Session["rol"]) == 0) { %>       
-        <a style="text-decoration: underline; padding: 5%;" href="ListaVehiculo.aspx">
-            <h2 class="title">Mis Vehículos</h2>
-        </a>
-        <% } %>
+        <div class="hero-body">
+            <div class="container">
+                <a style="text-decoration: none; padding: 5%;" href="ListaRuta.aspx">
+                  <h2 class="title">Mis Rutas</h2>
+                </a>
+                <% if( Convert.ToInt32(Session["rol"]) == 0) { %>       
+                <a style="text-decoration: none; padding: 5%;" href="ListaVehiculo.aspx">
+                    <h2 class="title">Mis Vehículos</h2>
+                </a>
+                <% } %>
 
-    </div>
-  </div>
-</section>
+            </div>
+        </div>
+    </section>
 
 </asp:Content>

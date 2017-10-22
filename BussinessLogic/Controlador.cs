@@ -69,5 +69,25 @@ namespace BussinessLogic
             var db = new ORMVehiculo();
             return db.Insertar(v);
         }
+
+        public static List<Vehiculo> ObtenerVehiculosPorPrestador(int pk)
+        {
+            return (pk != 0) ? new ORMVehiculo().ConsultarPorPrestador(pk) : new List<Vehiculo>(); 
+        }
+
+        public static bool ValidarNombreRuta(string nombre, int fkPrestador)
+        {
+            return string.IsNullOrEmpty(nombre) ? false : Validacion.RutaExiste(nombre, fkPrestador);
+        }
+
+        public static string CrearRuta(Ruta r)
+        {
+            return new ORMRuta().Insertar(r);
+        }
+
+        public static List<Ruta> ObtenerRutasPorUsuario(int pk, int rol)
+        {
+            return (pk != 0) ? new ORMRuta().ConsultarPorUsuario(pk, rol) : new List<Ruta>();
+        }
     }
 }

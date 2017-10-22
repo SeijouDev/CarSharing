@@ -12,9 +12,18 @@
     </div>
 
 
-<%--    <asp:gridview id="ListaVehiculos" autogeneratecolumns="true"  runat="server">
-    </asp:gridview>--%>
-
-   
-
+    <asp:gridview id="ListaVehiculosGv" autogeneratecolumns="false"  runat="server">
+        <Columns>
+            <asp:BoundField HeaderText="Marca" DataField="Marca" />
+            <asp:BoundField HeaderText="Linea" DataField="Linea" />
+            <asp:BoundField HeaderText="Placa" DataField="Placa" />
+            <asp:BoundField HeaderText="Color" DataField="Color" />
+            <asp:BoundField HeaderText="Ciudad" DataField="CiudadPlaca" />
+            <asp:BoundField HeaderText="Modelo" DataField="Modelo" />
+            <asp:BoundField HeaderText="Combustible" DataField="TipoCombustible" />
+            <asp:BoundField HeaderText="Tipo" DataField="ClaseVehiculo" />
+            <asp:BoundField HeaderText="Vacantes" DataField="Vacantes" />
+        </Columns>
+    </asp:gridview>
+    
 </asp:Content>

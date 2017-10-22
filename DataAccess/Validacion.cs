@@ -55,5 +55,26 @@ namespace DataAccess
 
             return result;
         }
+
+        public static bool RutaExiste(string nombre,int fkPrestador)
+        {
+            var result = false;
+
+            if (!string.IsNullOrEmpty(nombre))
+            {
+                var con = new Conexion();
+                con.Conectar();
+
+                var query = $"SELECT nombre FROM ruta WHERE nombre = '{nombre}' AND fk_prestador = {fkPrestador} AND  eliminado = 0";
+                var dataTable = con.Consultar(query);
+
+                if (dataTable != null && dataTable.Rows.Count <= 0)
+                    result = true;
+
+                con.Desconectar();
+            }
+
+            return result;
+        }
     }
 }

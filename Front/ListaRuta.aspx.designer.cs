@@ -10,15 +10,15 @@
 namespace Front {
     
     
-    public partial class ListaVehiculo {
+    public partial class ListaRuta {
         
         /// <summary>
-        /// Control ListaVehiculosGv.
+        /// Control ListaRutasGv.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView ListaVehiculosGv;
+        protected global::System.Web.UI.WebControls.GridView ListaRutasGv;
     }
 }
