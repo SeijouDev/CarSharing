@@ -16,8 +16,8 @@ namespace DataAccess
             con.Conectar();
             
 
-            var query = $"INSERT INTO ruta (fk_prestador,nombre, direccion_inicio, coordenadas_inicio, direccion_destino, coordenadas_destino ,eliminado) " +
-                $"VALUES ({r.FkPrestador} ,'{r.Nombre}', '{r.DireccionPuntoInicio}', '{r.PuntoInicio}', '{r.DireccionPuntoFinal}', '{r.PuntoFinal}' ,0)";
+            var query = $"INSERT INTO ruta (fk_prestador,nombre, direccion_inicio, coordenadas_inicio, direccion_destino, coordenadas_destino, fk_vehiculo ,eliminado) " +
+                $"VALUES ({r.FkPrestador} ,'{r.Nombre}', '{r.DireccionPuntoInicio}', '{r.PuntoInicio}', '{r.DireccionPuntoFinal}', '{r.PuntoFinal}' , {r.FkVehiculo} ,0)";
 
             string res = con.EjecutarQuery(query);
 

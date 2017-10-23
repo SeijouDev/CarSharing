@@ -18,33 +18,42 @@ namespace Front
 
             VehiculoDropdown.DataSource = Controlador.ObtenerVehiculosPorPrestador(Convert.ToInt32(Session["pk"]));
             VehiculoDropdown.DataTextField = "Placa";
-            VehiculoDropdown.DataValueField = "Placa";
+            VehiculoDropdown.DataValueField = "Pk";
             VehiculoDropdown.DataBind();
+
+            hdlngFin.Visible = true;
         }
 
         protected void submit_form_Click(object sender, EventArgs e)
         {
 
-            string msg = "";
+            string msg = "";            
 
             var r = new Entities.Ruta(
                 Nombre.Text,
                 DireccionInicio.Text, 
-                Convert.ToDouble(LatIni.Text.Replace('.',',')), 
-                Convert.ToDouble(LngIni.Text.Replace('.', ',')),
+                Convert.ToDouble(hdlatIni.Value.Replace('.',',')), 
+                Convert.ToDouble(hdlngIni.Value.Replace('.', ',')),
                 DireccionDestino.Text,
-                Convert.ToDouble(LatFin.Text),
-                Convert.ToDouble(LngFin.Text),
+                Convert.ToDouble(hdlatFin.Value.Replace('.', ',')),
+                Convert.ToDouble(hdlngFin.Value.Replace('.', ',')),
                 Convert.ToInt32(Session["pk"]));
 
+            r.FkVehiculo = Convert.ToInt32(VehiculoDropdown.SelectedValue);
+
             if (Controlador.ValidarNombreRuta(r.Nombre , Convert.ToInt32(Session["pk"])))            
-                msg = (Controlador.CrearRuta(r) == "1") ? "Registro exitoso!" : "Error en el regsitro.";
+                msg = (Controlador.CrearRuta(r) == "1") ? "Registro exitoso!" : "Error en el registro.";
             else
                 msg = "El nombre de la ruta ya existe";
 
             Result.Text = msg;
             Result.Visible = true;
             
+        }
+
+        protected void back_click(object sender, EventArgs e)
+        {
+            Response.Redirect("ListaRuta.aspx");
         }
     }
 }

@@ -9,7 +9,7 @@ CREATE TABLE `vehiculo` (
 `color` VARCHAR(10) NOT NULL,
 `ciudad_placa` VARCHAR(20) NOT NULL,
 `modelo` INT NOT NULL,
-`tipo_combustible` VARCHAR(10),
+`tipo_combustible` VARCHAR(20),
 `clase_vehiculo` VARCHAR(20) NOT NULL,
 `vacantes` INT NOT NULL,
 `foto` VARCHAR(21000),
@@ -48,11 +48,16 @@ CREATE TABLE `pasajero` (
 CREATE TABLE `ruta` (
 `ruta_id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 `nombre` VARCHAR(20) NOT NULL,
-`direccion_inicio` VARCHAR(50) NOT NULL,
-`coordenadas_inicio` VARCHAR(50) NOT NULL,
+`direccion_inicio` VARCHAR(200) NOT NULL,
+`coordenadas_inicio` VARCHAR(200) NOT NULL,
 `direccion_destino` VARCHAR(50) NOT NULL,
 `coordenadas_destino` VARCHAR(50) NOT NULL,
 `trayecto` VARCHAR(21000),
 `fk_prestador` INT NOT NULL REFERENCES `prestador`(`prestador_id`),
+`fk_vehiculo` INT NOT NULL REFERENCES `vehiculo`(`vehiculo_id`),
 `eliminado` INT NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+ALTER TABLE `ruta`
+ADD COLUMN  `fk_vehiculo` 
+INT NOT NULL REFERENCES `vehiculo`(`vehiculo_id`)

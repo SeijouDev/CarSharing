@@ -70,7 +70,7 @@ namespace DataAccess
             var con = new Conexion();
             con.Conectar();
 
-            var query = $"SELECT marca,linea,placa,color,ciudad_placa, modelo, tipo_combustible, clase_vehiculo, vacantes, foto FROM vehiculo WHERE eliminado = 0 AND fk_prestador = {fkPrestador}";
+            var query = $"SELECT vehiculo_id,marca,linea,placa,color,ciudad_placa, modelo, tipo_combustible, clase_vehiculo, vacantes, foto FROM vehiculo WHERE eliminado = 0 AND fk_prestador = {fkPrestador}";
 
             var dataTable = con.Consultar(query);
             var lista = new List<Vehiculo>();
@@ -82,6 +82,7 @@ namespace DataAccess
                     lista.Add(
                         new Vehiculo
                         {
+                            Pk = Convert.ToInt32(row["vehiculo_id"].ToString()),
                             Marca = row["marca"].ToString(),
                             Linea = row["linea"].ToString(),
                             Placa = row["placa"].ToString(),

@@ -14,6 +14,8 @@ namespace Front
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["Usuario"] == null)
+                Response.Redirect("Default.aspx");
 
         }
 
@@ -41,5 +43,10 @@ namespace Front
             Result.Text = msg;
             Result.Visible = true;
         }
-    }
+
+        protected void back_click(object sender, EventArgs e)
+        {
+            Response.Redirect("ListaVehiculo.aspx");
+        }
+    }  
 }

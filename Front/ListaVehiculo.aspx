@@ -37,4 +37,6 @@
         </Columns>
     </asp:gridview>
     
+    <asp:Button runat="server" ID="btnBack" Text="Volver" CssClass="btn btn-success" OnClick="back_click"/>
+
 </asp:Content>

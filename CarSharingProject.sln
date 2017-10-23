@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\Da
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Front", "Front\Front.csproj", "{B4ADBC88-D266-46F0-89E4-260B7D90C73F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "Testing\Testing.csproj", "{D4C463DB-05A7-4A9C-9195-788B63F0D265}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessObjects", "BusinessObjects\BusinessObjects.csproj", "{688CB691-1FE6-4D4C-92D8-EE7B3195274C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BussinessLogic", "BussinessLogic\BussinessLogic.csproj", "{02E9CCF4-6DFD-4308-9A05-E691C30A0DFD}"
@@ -33,10 +31,6 @@ Global
 		{B4ADBC88-D266-46F0-89E4-260B7D90C73F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4ADBC88-D266-46F0-89E4-260B7D90C73F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4ADBC88-D266-46F0-89E4-260B7D90C73F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D4C463DB-05A7-4A9C-9195-788B63F0D265}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D4C463DB-05A7-4A9C-9195-788B63F0D265}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D4C463DB-05A7-4A9C-9195-788B63F0D265}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D4C463DB-05A7-4A9C-9195-788B63F0D265}.Release|Any CPU.Build.0 = Release|Any CPU
 		{688CB691-1FE6-4D4C-92D8-EE7B3195274C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{688CB691-1FE6-4D4C-92D8-EE7B3195274C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{688CB691-1FE6-4D4C-92D8-EE7B3195274C}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -21,5 +21,10 @@ namespace Front
             ListaRutasGv.DataSource = rutas;
             ListaRutasGv.DataBind();
         }
+
+        protected void back_click(object sender, EventArgs e)
+        {
+            Response.Redirect("LobbyPrincipal.aspx");
+        }
     }
 }
