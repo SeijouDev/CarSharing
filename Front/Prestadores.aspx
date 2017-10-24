@@ -8,7 +8,7 @@
           <h3 class="title has-text-grey">Registrarse</h3>
           <div class="box">
               <figure class="avatar">
-                  <img src="https://placehold.it/128x128">
+                  <img src="https://winaero.com/blog/wp-content/uploads/2015/05/windows-10-user-account-login-icon.png">
               </figure>
               <div class="field">
                 <div class="control">
