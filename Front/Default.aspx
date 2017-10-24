@@ -9,7 +9,7 @@
           <h3 class="title has-text-grey">CarSharing</h3>
           <div class="box">
               <figure class="avatar">
-                  <img src="https://placehold.it/128x128">
+                  <img src="https://cdn2.iconfinder.com/data/icons/rcons-car/512/car-128.png">
               </figure>
               <div class="field">
                 <div class="control">

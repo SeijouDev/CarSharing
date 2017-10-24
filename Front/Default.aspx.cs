@@ -64,8 +64,6 @@ namespace Front
                         Session["rol"] = 0;
                         Session["pk"] = Controlador.ObtenerPkUsuario(prestador.Cedula, 0);
 
-                        var b = Session["pk"];
-
                         result = !result;
                     }
                 }
