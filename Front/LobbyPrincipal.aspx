@@ -22,7 +22,7 @@
       </div>
     </nav>
 
-    <section class="hero is-dark is-large">
+    <section class="hero is-info  is-fullheight">
       <div class="hero-body">
         <div class="container">
     

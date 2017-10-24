@@ -13,3 +13,11 @@ C:\Users\ASUS\Desktop\CarSharing\BusinessObjects\obj\Debug\netstandard1.1\Busine
 C:\Users\ASUS\Desktop\CarSharing\BusinessObjects\obj\Debug\netstandard1.1\BusinessObjects.AssemblyInfo.cs
 C:\Users\ASUS\Desktop\CarSharing\BusinessObjects\obj\Debug\netstandard1.1\BusinessObjects.dll
 C:\Users\ASUS\Desktop\CarSharing\BusinessObjects\obj\Debug\netstandard1.1\BusinessObjects.pdb
+C:\Users\ESTUDIANTES\Documents\CarSharing\BusinessObjects\bin\Debug\netstandard1.1\BusinessObjects.deps.json
+C:\Users\ESTUDIANTES\Documents\CarSharing\BusinessObjects\bin\Debug\netstandard1.1\BusinessObjects.dll
+C:\Users\ESTUDIANTES\Documents\CarSharing\BusinessObjects\bin\Debug\netstandard1.1\BusinessObjects.pdb
+C:\Users\ESTUDIANTES\Documents\CarSharing\BusinessObjects\obj\Debug\netstandard1.1\BusinessObjects.csprojResolveAssemblyReference.cache
+C:\Users\ESTUDIANTES\Documents\CarSharing\BusinessObjects\obj\Debug\netstandard1.1\BusinessObjects.csproj.CoreCompileInputs.cache
+C:\Users\ESTUDIANTES\Documents\CarSharing\BusinessObjects\obj\Debug\netstandard1.1\BusinessObjects.AssemblyInfo.cs
+C:\Users\ESTUDIANTES\Documents\CarSharing\BusinessObjects\obj\Debug\netstandard1.1\BusinessObjects.dll
+C:\Users\ESTUDIANTES\Documents\CarSharing\BusinessObjects\obj\Debug\netstandard1.1\BusinessObjects.pdb

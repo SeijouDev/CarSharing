@@ -12,3 +12,17 @@ C:\Users\ASUS\Desktop\CarSharing\BussinessLogic\obj\Debug\BussinessLogic.csprojR
 C:\Users\ASUS\Desktop\CarSharing\BussinessLogic\obj\Debug\BussinessLogic.csproj.CoreCompileInputs.cache
 C:\Users\ASUS\Desktop\CarSharing\BussinessLogic\obj\Debug\BussinessLogic.dll
 C:\Users\ASUS\Desktop\CarSharing\BussinessLogic\obj\Debug\BussinessLogic.pdb
+C:\Users\ESTUDIANTES\Documents\CarSharing\BussinessLogic\bin\Debug\BussinessLogic.dll
+C:\Users\ESTUDIANTES\Documents\CarSharing\BussinessLogic\bin\Debug\BussinessLogic.pdb
+C:\Users\ESTUDIANTES\Documents\CarSharing\BussinessLogic\bin\Debug\BusinessObjects.dll
+C:\Users\ESTUDIANTES\Documents\CarSharing\BussinessLogic\bin\Debug\DataAccess.dll
+C:\Users\ESTUDIANTES\Documents\CarSharing\BussinessLogic\bin\Debug\Entities.dll
+C:\Users\ESTUDIANTES\Documents\CarSharing\BussinessLogic\bin\Debug\MySql.Data.dll
+C:\Users\ESTUDIANTES\Documents\CarSharing\BussinessLogic\bin\Debug\BusinessObjects.pdb
+C:\Users\ESTUDIANTES\Documents\CarSharing\BussinessLogic\bin\Debug\DataAccess.pdb
+C:\Users\ESTUDIANTES\Documents\CarSharing\BussinessLogic\bin\Debug\DataAccess.dll.config
+C:\Users\ESTUDIANTES\Documents\CarSharing\BussinessLogic\bin\Debug\Entities.pdb
+C:\Users\ESTUDIANTES\Documents\CarSharing\BussinessLogic\obj\Debug\BussinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\ESTUDIANTES\Documents\CarSharing\BussinessLogic\obj\Debug\BussinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\ESTUDIANTES\Documents\CarSharing\BussinessLogic\obj\Debug\BussinessLogic.dll
+C:\Users\ESTUDIANTES\Documents\CarSharing\BussinessLogic\obj\Debug\BussinessLogic.pdb
