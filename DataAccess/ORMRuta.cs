@@ -37,7 +37,9 @@ namespace DataAccess
 
             if (rol == 0)
                 query = $"SELECT nombre, direccion_inicio, coordenadas_inicio, direccion_destino, coordenadas_destino FROM ruta WHERE eliminado = 0 AND fk_prestador = {fkUsuario} ";
-            
+            else
+                query = $"SELECT nombre, direccion_inicio, coordenadas_inicio, direccion_destino, coordenadas_destino FROM pasajero_ruta JOIN ruta r on ruta_id = fk_ruta WHERE fk_pasajero = {fkUsuario}";
+
             var dataTable = con.Consultar(query);
             var lista = new List<Ruta>();
 
@@ -97,5 +99,81 @@ namespace DataAccess
             
             return res;
         }
+
+        public List<Ruta> ConsultarPorDireccion (string str)
+        {
+            var con = new Conexion();
+            con.Conectar();
+
+            var query = $"SELECT nombre, direccion_inicio, coordenadas_inicio, direccion_destino, coordenadas_destino, fk_prestador FROM ruta WHERE eliminado = 0 "; 
+
+            query += (!string.IsNullOrEmpty(str)) ?  $" AND  (direccion_inicio LIKE '%{str}%' OR direccion_destino LIKE '%{str}%' ) " : "";
+
+            
+            var dataTable = con.Consultar(query);
+            var lista = new List<Ruta>();
+
+            if (dataTable != null)
+            {
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    lista.Add(
+                        new Ruta(
+                            row["nombre"].ToString(),
+                            row["direccion_inicio"].ToString(),
+                            Convert.ToDouble(row["coordenadas_inicio"].ToString().Split(':')[0]),
+                            Convert.ToDouble(row["coordenadas_inicio"].ToString().Split(':')[1]),
+                            row["direccion_destino"].ToString(),
+                            Convert.ToDouble(row["coordenadas_destino"].ToString().Split(':')[0]),
+                            Convert.ToDouble(row["coordenadas_destino"].ToString().Split(':')[1]),
+                            Convert.ToInt32(row["fk_prestador"].ToString())
+                        )
+                    );
+                }
+            }
+
+            con.Desconectar();
+
+            return lista;
+        }
+
+        public List<Ruta> ConsultarPorNombre(string nombre, int prestador)
+        {
+            var con = new Conexion();
+            con.Conectar();
+
+            var query = $"SELECT ruta_id, nombre, direccion_inicio, coordenadas_inicio, direccion_destino, coordenadas_destino, fk_vehiculo FROM ruta WHERE eliminado = 0 AND nombre = '{nombre}' AND fk_prestador={prestador}";
+            
+            var dataTable = con.Consultar(query);
+            var lista = new List<Ruta>();
+
+            if (dataTable != null)
+            {
+                foreach (DataRow row in dataTable.Rows)
+                {
+
+                    var r = new Ruta(
+                            row["nombre"].ToString(),
+                            row["direccion_inicio"].ToString(),
+                            Convert.ToDouble(row["coordenadas_inicio"].ToString().Split(':')[0]),
+                            Convert.ToDouble(row["coordenadas_inicio"].ToString().Split(':')[1]),
+                            row["direccion_destino"].ToString(),
+                            Convert.ToDouble(row["coordenadas_destino"].ToString().Split(':')[0]),
+                            Convert.ToDouble(row["coordenadas_destino"].ToString().Split(':')[1]),
+                            prestador,
+                            Convert.ToInt32(row["fk_vehiculo"].ToString())
+                        );
+
+                    r.pk = Convert.ToInt32(row["ruta_id"].ToString());
+
+                    lista.Add(r);
+                }
+            }
+
+            con.Desconectar();
+
+            return lista;
+        }
     }
+
 }

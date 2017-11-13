@@ -64,8 +64,32 @@
             </div>
          </div>
         <div class="container body-conte--%>
-            <asp:ContentPlaceHolder ID="MainContent" runat="server">
-            </asp:ContentPlaceHolder>
+
+         <nav class="navbar is-black" role="navigation" aria-label="dropdown navigation">
+            <div class="navbar-menu">
+            <div class="navbar-start">
+                <div class="navbar-item">CarSharing</div>
+            </div>
+
+                <asp:Panel ID="panel_nav" runat="server" CssClass="invisible">
+                    <div class="navbar-end" id="btn_nav" runat="server">
+                        <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            <asp:Label runat="server" ID="labelSaludo"></asp:Label>
+                        </a>
+
+                        <div class="navbar-dropdown is-right">
+                            <asp:linkbutton runat="server" OnClick="btn_logout_Click" CssClass="navbar-item">Cerrar Sesión</asp:linkbutton>
+                        </div>
+                        </div>
+                    </div>
+                </asp:Panel>
+            
+            </div>
+        </nav>
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+               
+        </asp:ContentPlaceHolder>
 
         <%--</div>--%>
 

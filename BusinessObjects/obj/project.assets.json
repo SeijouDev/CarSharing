@@ -2476,7 +2476,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ESTUDIANTES\\.nuget\\packages\\": {}
+    "C:\\Users\\ASUS\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -2484,14 +2484,14 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\ESTUDIANTES\\Documents\\CarSharing\\BusinessObjects\\BusinessObjects.csproj",
+      "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\git\\CarSharing\\BusinessObjects\\BusinessObjects.csproj",
       "projectName": "BusinessObjects",
-      "projectPath": "C:\\Users\\ESTUDIANTES\\Documents\\CarSharing\\BusinessObjects\\BusinessObjects.csproj",
-      "packagesPath": "C:\\Users\\ESTUDIANTES\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ESTUDIANTES\\Documents\\CarSharing\\BusinessObjects\\obj\\",
+      "projectPath": "C:\\Users\\ASUS\\Desktop\\git\\CarSharing\\BusinessObjects\\BusinessObjects.csproj",
+      "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ASUS\\Desktop\\git\\CarSharing\\BusinessObjects\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ESTUDIANTES\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

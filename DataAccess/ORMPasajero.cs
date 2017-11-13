@@ -138,5 +138,43 @@ namespace DataAccess
 
             return res;
         }
+
+        public string VincularRuta(int pkPasajero, int pkRuta)
+        {
+            var con = new Conexion();
+            con.Conectar();
+
+            var query = $"INSERT INTO pasajero_ruta (fk_pasajero , fk_ruta) VALUES ('{pkPasajero}','{pkRuta}')";
+
+            string res = con.EjecutarQuery(query);
+
+            Console.WriteLine(query);
+
+            con.Desconectar();
+
+            return res;
+
+        }
+
+        public int ObtenerPk(string cedula)
+        {
+
+            int result = 0;
+
+            var con = new Conexion();
+            con.Conectar();
+
+            var query = $"SELECT pasajero_id FROM pasajero WHERE eliminado = 0 AND cedula = '{cedula}'";
+
+            var dataTable = con.Consultar(query);
+
+            if (dataTable != null && dataTable.Rows.Count > 0)
+                result = Convert.ToInt32(dataTable.Rows[0]["pasajero_id"].ToString());
+
+            con.Desconectar();
+
+            return result;
+        }
+
     }
 }

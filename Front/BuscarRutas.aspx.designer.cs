@@ -10,42 +10,42 @@
 namespace Front {
     
     
-    public partial class SiteMaster {
+    public partial class BuscarRutas {
         
         /// <summary>
-        /// Control panel_nav.
+        /// Control Searchbox.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel panel_nav;
+        protected global::System.Web.UI.WebControls.TextBox Searchbox;
         
         /// <summary>
-        /// Control btn_nav.
+        /// Control submit_form.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl btn_nav;
+        protected global::System.Web.UI.WebControls.Button submit_form;
         
         /// <summary>
-        /// Control labelSaludo.
+        /// Control ListaRutasGv.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label labelSaludo;
+        protected global::System.Web.UI.WebControls.GridView ListaRutasGv;
         
         /// <summary>
-        /// Control MainContent.
+        /// Control btnBack.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.Button btnBack;
     }
 }

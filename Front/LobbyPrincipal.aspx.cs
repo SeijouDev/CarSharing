@@ -12,10 +12,10 @@ namespace Front
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            if(Session["Usuario"] != null)
-                labelSaludo.Text += $"{Session["Nombre"]} {Session["Apellido"]}";
-            else
+            if (Session["Usuario"] == null)
                 Response.Redirect("Default.aspx");
+            
+            
         }
 
         protected void btn_logout_Click(object sender, EventArgs e)

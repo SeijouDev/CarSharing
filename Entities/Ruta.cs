@@ -8,6 +8,7 @@ namespace Entities
 {
     public class Ruta
     {
+        public int pk { get; set; }
         public string Nombre { get; set; }
         public string PuntoInicio { get; set; }
         public string DireccionPuntoInicio { get; set; }
@@ -29,5 +30,20 @@ namespace Entities
             this.DiasDisponible = new List<int>();
             this.FkPrestador = fkPrestador;
         }
+
+        public Ruta(string nombre, string direccionInicio, double latInicio, double lngInicio, string direccionDestino, double latFin, double lngFin, int fkPrestador, int fkVehiculo)
+        {
+            this.Nombre = nombre;
+            this.PuntoInicio = $"{latInicio}:{lngInicio}";
+            this.DireccionPuntoInicio = direccionInicio;
+            this.PuntoFinal = $"{latFin}:{lngFin}";
+            this.DireccionPuntoFinal = direccionDestino;
+            this.Trayecto = new List<string>();
+            this.DiasDisponible = new List<int>();
+            this.FkPrestador = fkPrestador;
+            this.FkVehiculo = fkVehiculo;
+        }
+
+
     }
 }

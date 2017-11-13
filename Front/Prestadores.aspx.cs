@@ -56,7 +56,7 @@ namespace Front
                         {
                             //Valida que el nombre de usuario no exista el la base de datos
                             if (Controlador.ValidarNombreUsuario(p.Usuario))
-                                msg = (Controlador.CrearPasajero(p) == "1") ? "Registro exitoso!" : "Error en el regsitro.";
+                                msg = (Controlador.CrearPasajero(p) == "1") ? "Registro exitoso!" : "Error en el registro.";
                             else
                                 msg = "El nombre de usuario ya existe!";
                         }

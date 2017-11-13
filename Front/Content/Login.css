@@ -49,3 +49,11 @@ p {
 .alert_msg {
     color: red;
 }
+
+.invisible {
+    display: none;
+}
+
+.visible {
+    display: inline-block;
+}

@@ -28,7 +28,7 @@ namespace BussinessLogic
 
         public static int ObtenerPkUsuario(string cedula, int rol)
         {
-            return (rol == 0) ? new ORMPrestador().ObtenerPk(cedula) : -1; 
+            return (rol == 0) ? new ORMPrestador().ObtenerPk(cedula) : new ORMPasajero().ObtenerPk(cedula); 
         }
 
         public static string CrearPasajero(Pasajero p)
@@ -88,6 +88,28 @@ namespace BussinessLogic
         public static List<Ruta> ObtenerRutasPorUsuario(int pk, int rol)
         {
             return (pk != 0) ? new ORMRuta().ConsultarPorUsuario(pk, rol) : new List<Ruta>();
+        }
+
+        public static List<Ruta> BuscarRutas(string str)
+        {
+            return new ORMRuta().ConsultarPorDireccion(str);
+        }
+
+        public static List<Ruta> BuscarRutaPorNombre(string nombre, int prestador)
+        {
+            return new ORMRuta().ConsultarPorNombre(nombre, prestador);
+        }
+
+        public static List<Vehiculo> BuscarVehiculoPorId(int id)
+        {
+            return new ORMVehiculo().ConsultarPorId(id);
+        }
+
+        public static string VincularPasajeroRuta(int pkPasajero, string nombreRuta, int pkPrestador)
+        {
+            var r = new ORMRuta().ConsultarPorNombre(nombreRuta, pkPrestador);
+
+            return new ORMPasajero().VincularRuta(pkPasajero , r[0].pk );
         }
     }
 }

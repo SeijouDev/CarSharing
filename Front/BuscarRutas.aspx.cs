@@ -8,24 +8,34 @@ using System.Web.UI.WebControls;
 
 namespace Front
 {
-    public partial class ListaRuta : System.Web.UI.Page
+    public partial class BuscarRutas : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["Usuario"] == null)
                 Response.Redirect("Default.aspx");
+        }
 
-
-            var rutas = Controlador.ObtenerRutasPorUsuario(Convert.ToInt32(Session["pk"]) , Convert.ToInt32(Session["rol"]));
+        protected void Search(object sender, EventArgs e)
+        {
+            var rutas = Controlador.BuscarRutas(Searchbox.Text);
 
             ListaRutasGv.DataSource = rutas;
             ListaRutasGv.DataBind();
+        }
+
+        protected void Gridview_RowCommand(object sender, GridViewCommandEventArgs e) 
+        {
+            var rutaNombre = e.CommandArgument.ToString().Split(':')[0];
+            var prestador = e.CommandArgument.ToString().Split(':')[1];
+
+            Response.Redirect($"DetalleRuta.aspx?route={rutaNombre}&pr={prestador}");
+            
         }
 
         protected void back_click(object sender, EventArgs e)
         {
             Response.Redirect("LobbyPrincipal.aspx");
         }
-     
     }
 }

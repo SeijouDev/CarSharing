@@ -1,7 +1,5 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" Title="Nuevo vehículo" AutoEventWireup="true" CodeBehind="Vehiculo.aspx.cs" Inherits="Front.Vehiculo" %>
 
-
-
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server"> 
   <section class="hero is-success is-fullheight">
     <div class="hero-body">
@@ -9,6 +7,7 @@
         <div class="column is-8 is-offset-2">
           <h3 class="title has-text-grey">Nuevo vehículo</h3>
              <div class="box">
+
                <div class="field">
                 <div class="control">
                      <asp:Label runat="server">Marca*</asp:Label>
