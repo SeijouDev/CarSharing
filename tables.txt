@@ -1,4 +1,7 @@
+
+CREATE schema car_sharing_db;
 USE car_sharing_db;
+
 
 CREATE TABLE `vehiculo` (
 `vehiculo_id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -58,6 +61,10 @@ CREATE TABLE `ruta` (
 `eliminado` INT NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-ALTER TABLE `ruta`
-ADD COLUMN  `fk_vehiculo` 
-INT NOT NULL REFERENCES `vehiculo`(`vehiculo_id`)
+
+CREATE TABLE `pasajero_ruta` (
+`id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+`fk_pasajero` INT NOT NULL REFERENCES `pasajero`(`pasajero_id`),
+`fk_ruta` INT NOT NULL REFERENCES `ruta`(`ruta_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
